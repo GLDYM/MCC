@@ -447,7 +447,7 @@ namespace MinecraftClient
 
                 if (result != ProtocolHandler.LoginResult.Success)
                 {
-                    ConsoleIO.WriteLine(string.Format(Translations.mcc_connecting, Config.Main.General.AccountType == LoginType.mojang ? "Minecraft.net" : "Microsoft"));
+                    ConsoleIO.WriteLine(string.Format(Translations.mcc_connecting, Config.Main.General.AccountType == LoginType.mojang ? "Minecraft.net" : (Config.Main.General.AccountType == LoginType.microsoft ? "Microsoft" : Config.Main.General.AuthServer.Host)));
                     result = ProtocolHandler.GetLogin(InternalConfig.Account.Login, InternalConfig.Account.Password, Config.Main.General.AccountType, out session);
                 }
 
