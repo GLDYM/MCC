@@ -448,7 +448,7 @@ namespace MinecraftClient.Protocol
             {
                 return MojangLogin(user, pass, out session);
             }
-            else if (type == LoginType.Yggdrasil)
+            else if (type == LoginType.yggdrasil)
             {
                 return YggdrasiLogin(user, pass, out session);
             }
@@ -576,11 +576,11 @@ namespace MinecraftClient.Protocol
                                 {
                                     availablePlayers += " " + profile.Properties["name"].StringValue;
                                 } 
-                                ConsoleIO.WriteLine("AvailablePlayers:" + availablePlayers);
+                                ConsoleIO.WriteLine(Translations.mcc_avaliable_players + availablePlayers);
 
-                                ConsoleIO.WriteLine("SelectPlayer:");
+                                ConsoleIO.WriteLine(Translations.mcc_select_player);
                                 string selectedPlayer = ConsoleIO.ReadLine();
-                                ConsoleIO.WriteLine("Select "+ selectedPlayer + ":");
+                                ConsoleIO.WriteLine(Translations.mcc_selected_player + selectedPlayer);
                                 Json.JSONData selectedProfile = null;
                                 foreach (Json.JSONData profile in loginResponse.Properties["availableProfiles"].DataArray)
                                 {

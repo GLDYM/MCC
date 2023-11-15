@@ -416,7 +416,7 @@ namespace MinecraftClient
             else
             {
                 // Validate cached session or login new session.
-                if (Config.Main.Advanced.SessionCache != CacheType.none && SessionCache.Contains(loginLower) && Config.Main.General.AccountType != LoginType.Yggdrasil)
+                if (Config.Main.Advanced.SessionCache != CacheType.none && SessionCache.Contains(loginLower) && Config.Main.General.AccountType != LoginType.yggdrasil)
                 {
                     session = SessionCache.Get(loginLower);
                     result = ProtocolHandler.GetTokenValidation(session);
