@@ -649,6 +649,7 @@ namespace MinecraftClient
                     ProtocolHandler.LoginResult.OtherError          =>  Translations.error_login_network,
                     ProtocolHandler.LoginResult.SSLError            =>  Translations.error_login_ssl,
                     ProtocolHandler.LoginResult.UserCancel          =>  Translations.error_login_cancel,
+                    ProtocolHandler.LoginResult.WrongSelection      =>  Translations.error_login_blocked,
                     _                                               =>  Translations.error_login_unknown,
 #pragma warning restore format // @formatter:on
                 };
